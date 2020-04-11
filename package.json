@@ -1,0 +1,22 @@
+{
+  "name": "power-app",
+  "version": "1.0.0",
+  "description": "Application using for basic CURD operations in nodejs",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dhanakumarm/powerApp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dhanakumarm/powerApp/issues"
+  },
+  "homepage": "https://github.com/dhanakumarm/powerApp#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
