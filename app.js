@@ -1,6 +1,5 @@
-const path = require("path");
-process.env["NODE_CONFIG_DIR"] = path.join(__dirname,"Api","config") ;
-//process.env.PROD_SERVER = '127';
+require ('./env');
+
 const config = require("config");
 const morgan = require("morgan");
 const express = require("express");
