@@ -5,6 +5,7 @@ const morgan = require("morgan");
 const express = require("express");
 
 const users = require("./Api/routes/users");
+const middleware = require("./Api/routes/middleware");
 const app = express();
 
 
@@ -14,6 +15,8 @@ if (app.get('env') === "development") {
 }
 
 app.use('/api/users',users);
+
+app.use('/api',middleware);
 
 // Middleware function example
 app.use(function (req, res, next) {
