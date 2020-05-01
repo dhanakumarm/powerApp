@@ -1,5 +1,6 @@
-require ('./env');
+require('./env');
 
+const log = require("debug")('app:startup');
 const config = require("config");
 const morgan = require("morgan");
 const express = require("express");
@@ -10,21 +11,24 @@ const app = express();
 
 if (app.get('env') === "development") {
     app.use(morgan('tiny'));
-    console.log("Morgan Enabled");    
+    log("Morgan Enabled");
 }
 
-app.use('/api/users',users);
+app.use(express.json());
 
-// Middleware function example
+// Routing level middleware 
+app.use('/api/users', users);
+
+// Application level Middleware function example
 app.use(function (req, res, next) {
-    console.log("Authenticating...!");
+    log("Authenticating...!");
     next();
 });
 
 
 app.get("/api", (req, res) => {
     res.send("Hello World...!");
-    console.log("Hello World");
+    log("Hello World");
 });
 
 // Query string params
@@ -42,7 +46,7 @@ app.get("/api/user/:id", (req, res) => {
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-    //console.log(config.get("dbConfig.host"));
-  console.log(`${config.get("name")} is Listening on port ${port} `);
+    log(config.get("dbConfig.host"));
+    console.log(`${config.get("name")} is Listening on port ${port} `);
 });
 

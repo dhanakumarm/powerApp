@@ -2,6 +2,6 @@
     "name" : "Power App - Dev",
     "dbConfig" : {
         "host" : "localhost",
-        "database" : "power_app"        
+        "database" : "power_app"
     }
 }

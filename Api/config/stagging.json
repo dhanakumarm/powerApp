@@ -1,0 +1,7 @@
+{
+    "name" : "Power App - Stagging",
+    "dbConfig" : {
+        "host" : "localhost",
+        "database" : "power_app"        
+    }
+}

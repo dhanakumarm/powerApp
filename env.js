@@ -4,3 +4,5 @@ process.env['PROD_SERVER'] = 'localhost';
 process.env['JWT_SECRET'] = 'testPowertAppg';
 process.env['DB_USER'] = 'root';
 process.env['DB_PASSWORD'] = 'Dhana@231';
+process.env['NODE_ENV'] = 'development';
+process.env['DEBUG'] = 'app:*';
