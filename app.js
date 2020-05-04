@@ -3,6 +3,7 @@ require ('./env');
 const config = require("config");
 const morgan = require("morgan");
 const express = require("express");
+const bodyParser = require("body-parser");
 
 const users = require("./Api/routes/users");
 const middleware = require("./Api/routes/middleware");
@@ -13,6 +14,8 @@ if (app.get('env') === "development") {
     app.use(morgan('tiny'));
     console.log("Morgan Enabled");    
 }
+
+app.use(bodyParser.json());
 
 app.use('/api/users',users);
 
