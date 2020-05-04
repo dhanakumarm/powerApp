@@ -40,3 +40,14 @@ CREATE TABLE IF NOT EXISTS `tbl_user_master` (
 
 INSERT INTO `tbl_user_master` (`user_id`, `user_name`, `user_fullname`, `user_email`, `user_password`, `user_type`, `user_status`, `auth_key`, `user_activation_code`, `user_created_by`, `user_created_date`, `user_modified_by`, `user_modified_date`) VALUES
 	(1, 'admin', 'admin', 'admin@test.com', '55478a4af0e7d9247681d59adac74bf4', 'User', 'Y', '12345', 'qwerty', 1, '2020-04-11 22:54:02', 1, '2020-04-11 22:54:07');
+	
+DROP TABLE IF EXISTS `employee`;
+CREATE TABLE IF NOT EXISTS `employee` (
+  `id` int(11) NOT NULL AUTO_INCREMENT COMMENT 'primary key',
+  `employee_name` varchar(255) NOT NULL COMMENT 'employee name',
+  `employee_salary` double NOT NULL COMMENT 'employee salary',
+  `employee_age` int(11) NOT NULL COMMENT 'employee age',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1 COMMENT='datatable demo table';
+	
+	
